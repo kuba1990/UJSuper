@@ -1,7 +1,6 @@
 <personslist>
-    <div id="persons_table">
 
-    </div>
+    <div class="table-container"></div>
     <!--
     <table id="country">
 

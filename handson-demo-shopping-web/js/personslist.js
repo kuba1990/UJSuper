@@ -1,4 +1,4 @@
-var initPersonList = function() {
+var initPersonList = function () {
     console.log("first line");
     console.log(api_endpoint);
     $.ajax({
@@ -6,28 +6,56 @@ var initPersonList = function() {
         url: api_endpoint + '/aggregateddata/ctry',
         dataType: 'json',
         success: function (data) {
-            $.each(data, function(index,countryPerson) {
+           //TODO
+            //how to read country from data
+
+            $.each(data, function (index, countryPerson) {
                 console.log(countryPerson);
                 console.log("dupa");
-                var content = '<table id = "country_'+index+'>';
 
 
-               content +='<tr>'+
-                '<th colspan="5">Country</th>'+
-                    '</tr>'+
-                    '<tr>'+
-                    '<td>Id</td>'+
-                    '<td>Name</td>'+
-                    '<td>Last name</td>'+
-                '<td>Additional info</td>'+
-                '<td>Gender</td>'+
-                '</tr> ' ;
+                var mytable = $('<table></table>').attr({ id: "basicTable" });
+                var rows = new Number($("#rowcount").val());
+                var cols = new Number($("#columncount").val());
+                var tr = [];
+                for (var i = 0; i < rows; i++) {
+                    var row = $('<tr></tr>').attr({ class: ["class1", "class2", "class3"].join(' ') }).appendTo(mytable);
+                    for (var j = 0; j < cols; j++) {
+                        $('<td></td>').text("text1").appendTo(row);
+                    }
 
-                content += "</table>";
+                }
+                console.log("TTTTT:"+mytable.html());
+                mytable.appendTo("#box");
 
-                $('#country_'+index+'').append(content);
 
-                $.each(countryPerson, function(index1,person) {
+
+
+
+
+
+
+
+
+                /* var content = '<table id = "country_' + index + '>';
+
+
+                 content += '<tr>' +
+                     '<th colspan="5">Country</th>' +
+                     '</tr>' +
+                     '<tr>' +
+                     '<td>Id</td>' +
+                     '<td>Name</td>' +
+                     '<td>Last name</td>' +
+                     '<td>Additional info</td>' +
+                     '<td>Gender</td>' +
+                     '</tr> ';
+
+                 content += "</table>";
+
+                 $('#country_' + index + '').append(content);*/
+
+                $.each(countryPerson, function (index1, person) {
 
 
                     /*$('#country tr:last').after('<tr>\n' +
@@ -46,16 +74,15 @@ var initPersonList = function() {
                 });
 
             });
-           /* $.each(data, function(index, element) {
-                console.log(element);
-                console.log(index);
-                /!*$('body').append($('<div>', {
-                    text: element.name
-                }));*!/
-            });*/
+            /* $.each(data, function(index, element) {
+                 console.log(element);
+                 console.log(index);
+                 /!*$('body').append($('<div>', {
+                     text: element.name
+                 }));*!/
+             });*/
         }
     });
-
 
 
     /*var table = $('#personList').DataTable({
