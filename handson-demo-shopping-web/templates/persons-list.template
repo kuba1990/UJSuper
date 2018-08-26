@@ -1,5 +1,10 @@
 <personslist>
+    <div id="persons_table">
+
+    </div>
+    <!--
     <table id="country">
+
       <tr>
         <th colspan="5">Country</th>
       </tr>
@@ -11,4 +16,6 @@
         <td>Gender</td>
       </tr>
     </table>
+   -->
+
 </personslist>
