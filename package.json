@@ -1,0 +1,19 @@
+{
+  "name": "jw_shopping-application-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@buildtools.bisnode.com:7999/sat/jw_shopping-application-ui.git"
+  },
+  "author": "Jar (War)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

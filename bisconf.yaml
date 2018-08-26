@@ -1,0 +1,31 @@
+service:
+    name: handson-demo-shopping-web
+    fullName: HandsOn Demo Shopping Service made by JW TEAM
+    groupName: handson_shopping
+    description: The most efficient service ever.
+    gpmCode: ??????
+    version: 1.0
+    tier: web
+    maintainer:
+        name: Jar (War)riors
+        email: radoslaw.bobowski@bisnode.com
+    categories:
+      - fooBar
+    replicas: 1
+containers:
+    default:
+        variables:
+            API_ENDPOINT: https://orc-dev-cluster1.blue.bisnode.net/handson-shopping-orchestration/v1
+        ports:
+            - 80
+        livenessProbe:
+            httpGet:
+                path: /ping
+                port: 80
+            initialDelaySeconds: 180
+            timeoutSeconds: 5
+        readinessProbe:
+            httpGet:
+                path: /ping
+                port: 80
+            timeoutSeconds: 5                                
