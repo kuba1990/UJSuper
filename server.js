@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000
 const fs = require('fs')
-const api_endpoint = process.env.API_ENDPOINT || "http://localhost:8081/handson-shopping-orchestration/v1"
+const api_endpoint = process.env.API_ENDPOINT || "http://localhost:8090/di-rest-svc/v1"
  
 fs.writeFileSync(
   __dirname + '/handson-demo-shopping-web/config/env.js',

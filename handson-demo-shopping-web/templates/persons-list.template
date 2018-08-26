@@ -1,0 +1,10 @@
+<personslist>
+    <table id="personList" class="display" cellspacing="0" width="100%">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+    </table>
+</personslist>

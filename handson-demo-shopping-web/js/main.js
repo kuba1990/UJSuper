@@ -12,6 +12,15 @@
 
         });
 
+        this.get('#/personslist/', function(context) {
+            context.app.swap('');
+            context.render('templates/persons-list.template', {})
+                .appendTo(context.$element()).then(function(){
+                initPersonList()
+            });
+
+        });
+
         this.get('#/cart/', function(context) {
             context.app.swap('');
             context.render('templates/cart.template', {})
@@ -44,7 +53,7 @@
     });
 
     $(function() {
-        app.run('#/productslist/');
+        app.run('#/personslist/');
     });
 
 })(jQuery);

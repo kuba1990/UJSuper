@@ -15,7 +15,7 @@ service:
 containers:
     default:
         variables:
-            API_ENDPOINT: https://orc-dev-cluster1.blue.bisnode.net/handson-shopping-orchestration/v1
+            API_ENDPOINT: http://localhost:8090/di-rest-svc/v1
         ports:
             - 80
         livenessProbe:

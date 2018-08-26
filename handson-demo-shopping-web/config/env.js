@@ -1,1 +1,1 @@
-var api_endpoint = "http://localhost:8081/handson-shopping-orchestration/v1";
+var api_endpoint = "http://localhost:8090/di-rest-svc/v1";
