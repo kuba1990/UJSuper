@@ -1,10 +1,14 @@
 <personslist>
-    <table id="personList" class="display" cellspacing="0" width="100%">
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Action</th>
-        </tr>
-        </thead>
+    <table id="country">
+      <tr>
+        <th colspan="5">Country</th>
+      </tr>
+      <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Last name</td>
+        <td>Additional info</td>
+        <td>Gender</td>
+      </tr>
     </table>
 </personslist>
